@@ -430,7 +430,7 @@ class OptimadeExtractor:
         new_attributes["elements_ratios"] = list(frac_comp.values())
 
         # Set space group
-        spc_symbol, spc_number = structure.get_space_group_info()
+        spc_symbol, spc_number = structure.get_space_group_info(symprec=0.1)
         new_attributes["space_group_symbol"] = spc_symbol
         new_attributes["space_group_number"] = spc_number
         return new_attributes
